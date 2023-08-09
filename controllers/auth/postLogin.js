@@ -18,7 +18,7 @@ export const postLogin = async (req, res) => {
           userId: user._id,
           mail,
         },
-        process.env.TOKEN_KEY,
+        12345678910,
         {
           expiresIn: "24h",
         }
