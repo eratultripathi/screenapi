@@ -10,7 +10,7 @@ const verifyToken = (req, res, next) => {
   }
   try {
     token = token.replace(/^Bearer\s+/, "");
-    const decoded = jwt.verify(token, 12345678910);
+    const decoded = jwt.verify(token, "12345678");
     req.user = decoded;
   } catch (err) {
     return res.status(401).send("Invalid Token");
