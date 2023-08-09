@@ -14,6 +14,9 @@ import credentialRoutes from "./routes/ProjectCredential.js";
 import taskRoutes from "./routes/ProjectTask.js";
 import screenRoutes from "./routes/screenshot.js";
 import employeeprojecttaskRoutes from "./routes/employeeprojecttask.js";
+// calendar
+import calendarRoutes from "./routes/calendar.js";
+
 
 /* CONFIGURATION */
 dotenv.config();
@@ -47,7 +50,8 @@ app.use("/api/project",taskRoutes)
 app.use("/api/project",credentialRoutes)
 app.use("/api/project",employeeprojecttaskRoutes)
 app.use("/api",screenRoutes)
-
+// calendar
+app.use("/api/calendar",calendarRoutes)
 
 
 /* Database */
