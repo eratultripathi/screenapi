@@ -33,7 +33,7 @@ export  const  postRegister = async (req, res) => {
         userId: user._id,
         mail,
       },
-     12345678910,
+   "12345678",
       {
         expiresIn: "24h",
       }
