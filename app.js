@@ -5,7 +5,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
-
+//Auth
+import authRoutes from "./routes/authRoutes.js";
 import clientProfileRoutes from "./routes/clientprofile.js";
 import employeeProfileRoutes from "./routes/employeeprofile.js";
 import projecteRoutes from "./routes/project.js";
@@ -29,7 +30,8 @@ app.use(cors());
 
 
 
-
+// register the routes
+app.use("/api/auth", authRoutes);
 
 app.use("/api/engineer",employeeProfileRoutes);
 
