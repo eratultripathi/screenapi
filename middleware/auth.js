@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-const config = process.env;
+const config = {TOKEN_KEY:12345678910};
 
 const verifyToken = (req, res, next) => {
   let token = req.body.token || req.query.token || req.headers["authorization"];
