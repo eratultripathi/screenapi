@@ -16,9 +16,9 @@ import screenRoutes from "./routes/screenshot.js";
 import employeeprojecttaskRoutes from "./routes/employeeprojecttask.js";
 // calendar
 import calendarRoutes from "./routes/calendar.js";
+import boardRoutes from "./Routes/BoardRoutes.js";
+import taskRoutes from "./Routes/TaskRoutes.js";
 
-
-/* CONFIGURATION */
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -52,7 +52,9 @@ app.use("/api/project",employeeprojecttaskRoutes)
 app.use("/api",screenRoutes)
 // calendar
 app.use("/api/calendar",calendarRoutes)
-
+//TASK Board
+app.use("/api/boards", boardRoutes);
+app.use("/api/tasks", taskRoutes);
 
 /* Database */
 mongoose.set( 'strictQuery', false);
